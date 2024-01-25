@@ -5,6 +5,7 @@ import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
 import Email from "../components/icons/Email.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -44,7 +45,7 @@ import Email from "../components/icons/Email.astro";
 					target="_blank"
 					rel="noonpener"
 				>
-					<LinkedIn class="w-6 h-6" />
+					<LinkedIn class="size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill
@@ -52,7 +53,7 @@ import Email from "../components/icons/Email.astro";
 					target="_blank"
 					rel="noonpener"
 				>
-					<GitHub class="w-6 h-6" />
+					<GitHub class="size-6" />
 					GitHub
 				</SocialPill>
 
@@ -61,10 +62,15 @@ import Email from "../components/icons/Email.astro";
 					target="_blank"
 					rel="noonpener"
 				>
-					<Email class="w-6 h-6" />
+					<Email class="size-6" />
 					facundofigueroa789@gmail.com
 				</SocialPill>
 			</nav>
+		</section>
+
+		<!-- Projects Section -->
+		<section>
+			<Projects />
 		</section>
 	</main>
 </Layout>

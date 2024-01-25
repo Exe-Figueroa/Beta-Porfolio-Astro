@@ -1,0 +1,37 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+
+const PROJECTS = [
+  {
+    date: "11-2-2023",
+    title: "Example title.js",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eligendi quis nemo quam vel aspernatur, excepturi commodi atque? Atque exercitationem, assumenda sequi vitae pariatur consequuntur voluptatum accusantium expedita ad rem.",
+    link: "#",
+  },
+  {
+    date: "11-2-2023",
+    title: "Example title2.js",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eligendi quis nemo quam vel aspernatur, excepturi commodi atque? Atque exercitationem, assumenda sequi vitae pariatur consequuntur voluptatum accusantium expedita ad rem.",
+    link: "#",
+  },
+  {
+    date: "11-2-2023",
+    title: "Example title3.js",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eligendi quis nemo quam vel aspernatur, excepturi commodi atque? Atque exercitationem, assumenda sequi vitae pariatur consequuntur voluptatum accusantium expedita ad rem.",
+    link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    PROJECTS.map((project) => (
+      <li class="mb-10 ms-4">
+        <ProjectItem {...project} />
+      </li>
+    ))
+  }
+</ol>
