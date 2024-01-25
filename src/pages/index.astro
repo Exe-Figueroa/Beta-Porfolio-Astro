@@ -4,9 +4,13 @@ import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
+import Email from "../components/icons/Email.astro";
 ---
 
-<Layout title="Beta-Portfolio">
+<Layout
+	title="Beta-Portfolio Facundo - Desarrollador y Programador Web"
+	description="Contrata a Facundo para crear tu aplicación web. Desarrollador web full stack especializado en crear aplicaciones únicas"
+>
 	<main>
 		<!-- Section for the person description -->
 		<section class="w-full lg:w-[740px] mx-auto py-44">
@@ -34,7 +38,7 @@ import SocialPill from "../components/icons/SocialPill.astro";
 				>.
 			</h2>
 
-			<nav class="flex gap-2 py-2">
+			<nav class="flex gap-4 mt-8">
 				<SocialPill
 					href="https://www.linkedin.com/in/facundo-figueroa"
 					target="_blank"
@@ -50,6 +54,15 @@ import SocialPill from "../components/icons/SocialPill.astro";
 				>
 					<GitHub class="w-6 h-6" />
 					GitHub
+				</SocialPill>
+
+				<SocialPill
+					href="https://github.com/Exe-Figueroa"
+					target="_blank"
+					rel="noonpener"
+				>
+					<Email class="w-6 h-6" />
+					facundofigueroa789@gmail.com
 				</SocialPill>
 			</nav>
 		</section>
