@@ -5,15 +5,23 @@ import Badge from "../components/Badge.astro";
 
 <Layout title="Beta-Portfolio">
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44" >
-			<h1 class="text-white text-5xl font-bold">
-				Hey soy Facu <Badge>Disponible para trabajar</Badge>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1
+				class="text-white text-5xl font-bold flex flex-row items-center gap-x-4 pb-10"
+			>
+				Hey soy Facu <a
+					href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
+					target="_blank"
+					rel="noonpener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
 			</h1>
-			<h2>
+			<h2 class="text-2xl opacity-80">
 				+1 año de experiencia. Desarrollador Web con JavaScript. De Mendoza,
 				Argentina 🇦🇷. Especializado en crear aplicaciones únicas
 			</h2>
 		</section>
-
 	</main>
 </Layout>
