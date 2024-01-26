@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro"
 import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
 import Email from "../components/icons/Email.astro";
 import Projects from "../components/Projects.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout
@@ -14,7 +16,7 @@ import Projects from "../components/Projects.astro";
 >
 	<main>
 		<!-- Section for the person description -->
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<SectionContainer class="pt-44 pb-24" id="sobre-mi">
 			<h1
 				class="text-white text-5xl font-bold flex flex-row items-center gap-x-4 pb-10"
 			>
@@ -66,11 +68,15 @@ import Projects from "../components/Projects.astro";
 					facundofigueroa789@gmail.com
 				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
 
 		<!-- Projects Section -->
-		<section>
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-8" />
+				Experiencia Laboral
+			</h2>
 			<Projects />
-		</section>
+		</SectionContainer>
 	</main>
 </Layout>
