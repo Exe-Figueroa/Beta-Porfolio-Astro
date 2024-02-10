@@ -1,7 +1,7 @@
 ---
-import ProjectItem from "./ProjectItem.astro";
+import ExperienceItem from "./ExperienceItem.astro";
 
-const PROJECTS = [
+const EXPERIENCES = [
   {
     date: "11-2-2023",
     title: "Example title.js",
@@ -28,9 +28,9 @@ const PROJECTS = [
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
   {
-    PROJECTS.map((project) => (
+    EXPERIENCES.map((item) => (
       <li class="mb-10 ms-4">
-        <ProjectItem {...project} />
+        <ExperienceItem {...item} />
       </li>
     ))
   }
