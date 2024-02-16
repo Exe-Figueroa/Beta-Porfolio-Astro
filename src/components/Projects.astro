@@ -1,0 +1,63 @@
+---
+import ReactIcon from "./icons/React.astro"
+const TAGS = {
+  react: {
+    name: "React",
+    class: "bg-blue-500",
+    icon: ReactIcon ,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Proyecto 1",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
+    link: "https://www.google.com",
+    github: "https://www.github.com",
+    image: "../../public/projects/1Portfolio.webp",
+    tags: [TAGS.react, TAGS.react],
+  },
+  {
+    title: "Proyecto 2",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
+    link: "https://www.google.com",
+    github: "https://www.github.com",
+    image: "../../public/projects/2portfolio.webp",
+    tags: [TAGS.react],
+  },
+  {
+    title: "Proyecto 3",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
+    link: "https://www.google.com",
+    github: "https://www.github.com",
+    image: "../../public/projects/3portfolio.webp",
+    tags: [TAGS.react],
+  },
+];
+---
+
+{
+  PROJECTS.map(({title, description, github, image, link,tags}) => (
+    <article class="mb-8">
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          // <li>{tag}</li>
+          <li>
+            <span class={`inline-flex py-1 px-2 items-center gap-x-2 rounded-full text-xs mb-4 ${tag.class}`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img 
+      class="rounded shadow-2xl shadow-white/10"
+      src={image} 
+      alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
+

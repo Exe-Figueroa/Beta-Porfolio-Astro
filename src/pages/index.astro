@@ -6,19 +6,21 @@ import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
 import Email from "../components/icons/Email.astro";
-import Projects from "../components/Experience.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
 ---
 
 <Layout
 	title="Beta-Portfolio Facundo - Desarrollador y Programador Web"
 	description="Contrata a Facundo para crear tu aplicación web. Desarrollador web full stack especializado en crear aplicaciones únicas"
 >
-	<main>
+	<main class="p-2">
 		<!-- Section for the person description -->
-		<SectionContainer class="pt-44 pb-24" id="sobre-mi">
+		<SectionContainer class="pt-44 pb-32" id="sobre-mi">
 			<h1
-				class="text-white text-5xl font-bold flex flex-row items-center gap-x-4 pb-10"
+				class="text-white text-2xl lg:text-5xl font-bold flex flex-row items-center gap-x-4 pb-10"
 			>
 				Hey soy Facu <a
 					href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
@@ -70,11 +72,20 @@ import Briefcase from "../components/icons/Briefcase.astro";
 			</nav>
 		</SectionContainer>
 
-		<!-- Projects Section -->
+		<!-- Experience Section -->
 		<SectionContainer id="experiencia">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-8" />
 				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		
+		<!-- Projects Section -->
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-8" />
+				Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
