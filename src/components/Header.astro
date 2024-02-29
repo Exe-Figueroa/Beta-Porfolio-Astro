@@ -1,6 +1,33 @@
-<header class="flex justify-center items-center py-5 w-full  xl:w-[1120px] mx-auto">
+---
+import "../styles/style.css";
+---
 
-  <nav class="sm:flex flex-row justify-between opacity-90 w-full lg:w-[740px] mx-auto hidden sm:px-12">
+<header
+  class="flex justify-end sm:justify-center items-center sm:py-5 w-full xl:w-[1120px] mx-auto"
+>
+  <div class="w-full relative sm:hidden">
+    <div class="fixed top-4 right-4 z-20">
+      <input id="checkbox" type="checkbox" />
+      <label class="toggle" for="checkbox">
+        <div id="bar1" class="bars"></div>
+        <div id="bar2" class="bars"></div>
+        <div id="bar3" class="bars"></div>
+      </label>
+    </div>
+    <div
+      id="menu"
+      class="fixed bottom-full left-0 z-10 w-full h-screen transition flex flex-col bg-slate-800 items-center justify-center gap-8 text-2xl font-bold"
+    >
+      <a class="anchor" href="#top">Inicio</a>
+      <a class="anchor" href="#experiencia">Experiencia</a>
+      <a class="anchor" href="#proyectos">Proyectos</a>
+      <a class="anchor" href="#sobre-mi">Sobre mí</a>
+      <a class="anchor" href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <nav
+    class="sm:flex flex-row justify-between opacity-90 w-full lg:w-[740px] mx-auto hidden sm:px-12"
+  >
     <a href="#top">Inicio</a>
     <a href="#experiencia">Experiencia</a>
     <a href="#proyectos">Proyectos</a>
@@ -8,3 +35,18 @@
     <a href="#contacto">Contacto</a>
   </nav>
 </header>
+<script>
+  const checkbox = document.getElementById("checkbox");
+  const anchorList = document.querySelectorAll(".anchor");
+  const menu = document.getElementById("menu");
+  checkbox?.addEventListener("change", toggleSeeMenu);
+  function toggleSeeMenu({ target }) {
+    menu?.classList.toggle("translate-y-full");
+    if (target.nodeName !== "INPUT") {
+      checkbox.checked = !checkbox.checked;
+    }
+  }
+  anchorList.forEach((anchor) => {
+    anchor.addEventListener("click", toggleSeeMenu);
+  });
+</script>
