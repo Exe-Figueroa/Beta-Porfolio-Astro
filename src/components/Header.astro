@@ -40,10 +40,13 @@ import "../styles/style.css";
   const anchorList = document.querySelectorAll(".anchor");
   const menu = document.getElementById("menu");
   checkbox?.addEventListener("change", toggleSeeMenu);
-  function toggleSeeMenu({ target }) {
-    menu?.classList.toggle("translate-y-full");
-    if (target.nodeName !== "INPUT") {
-      checkbox.checked = !checkbox.checked;
+  function toggleSeeMenu(event: Event) {
+    const target = event.target as HTMLElement;
+    if (checkbox instanceof HTMLInputElement) {
+      menu?.classList.toggle("translate-y-full");
+      if (target.nodeName !== "INPUT") {
+        checkbox.checked = !checkbox.checked;
+      }
     }
   }
   anchorList.forEach((anchor) => {
