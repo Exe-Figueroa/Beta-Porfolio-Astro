@@ -1,71 +1,127 @@
 ---
-import ReactIcon from "./icons/React.astro"
+import ProyectBtn from "./icons/ProyectBtn.astro"
+import SeeMore from "./icons/SeeMore.astro";
+
+import ReactIcon from "./icons/React.astro";
+import NodeIcon from "./icons/Node.astro";
+import JSIcon from "./icons/JS.astro";
+import CSSIcon from "./icons/CSS.astro";
+import HTMLIcon from "./icons/HTML.astro";
+import DBIcon from "./icons/DB.astro";
+import GitHub from "./icons/GitHub.astro";
 const TAGS = {
   react: {
     name: "React",
     class: "bg-blue-500",
-    icon: ReactIcon ,
+    icon: ReactIcon,
+  },
+  node: {
+    name: "Node",
+    class: "bg-[#346f18]",
+    icon: NodeIcon,
+  },
+  js: {
+    name: "JavaScript",
+    class: "bg-[#efd94bd1]",
+    icon: JSIcon,
+  },
+  css: {
+    name: "CSS",
+    class: "bg-[#3177b9]",
+    icon: CSSIcon,
+  },
+  html: {
+    name: "HTML",
+    class: "bg-[#e55138]",
+    icon: HTMLIcon,
+  },
+  db: {
+    name: "PostgreSQL",
+    class: "bg-[#478fca]",
+    icon: DBIcon,
   },
 };
 
 const PROJECTS = [
   {
-    title: "Proyecto 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
-    link: "https://www.google.com",
-    github: "https://www.github.com",
-    image: "projects/1Portfolio.webp",
-    tags: [TAGS.react, TAGS.react],
-  },
-  {
-    title: "Proyecto 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
-    link: "https://www.google.com",
-    github: "https://www.github.com",
-    image: "projects/2portfolio.webp",
-    tags: [TAGS.react],
-  },
-  {
-    title: "Proyecto 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
-    link: "https://www.google.com",
+    title: "Network of Posts (mobile)",
+    description:
+      "Se trata de crear una red social donde los usuarios pueden registrarse, iniciar sesión y compartir publicaciones. Para esto, se utiliza ReactJS para el diseño web, Node.js para la lógica del servidor y PostgreSQL como base de datos.",
+    link: "https://01-red-post-frontend.vercel.app/",
     github: "https://www.github.com",
     image: "projects/3portfolio.webp",
-    tags: [TAGS.react],
+    tags: [TAGS.react, TAGS.node, TAGS.js, TAGS.css, TAGS.html, TAGS.db],
   },
   {
-    title: "Proyecto 4",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat corrupti sapiente? Error ab aut voluptatem rem minima saepe nihil nam autem dolorem aliquam distinctio ratione officia delectus, quia molestiae!",
-    link: "https://www.google.com",
-    github: "https://www.github.com",
+    title: "FlixerDB  (mobile)",
+    description:
+      "Esta es una aplicación web de una cartelera de películas que utiliza la API de moviedb. Está desarrollada con JavaScript, HTML y CSS, utilizando hash routing para la navegación entre diferentes vistas. La aplicación permite ver películas favoritas, filtrar películas por categorías, añadir películas a favoritos y ver información detallada de cada película en una vista individual.",
+    link: "https://movie-db-bice-three.vercel.app",
+    github: "https://github.com/Exe-Figueroa/MovieDB",
+    image: "projects/1Portfolio.webp",
+    tags: [TAGS.js, TAGS.html, TAGS.css],
+  },
+  {
+    title: "Music player (mobile)",
+    description:
+      "Este es un simulador de reproductor de música desarrollado utilizando HTML, CSS y JavaScript. La aplicación cuenta con cuatro canciones que se pueden cambiar utilizando los botones Next y Back. Además, incluye una barra de tiempo que muestra el progreso de reproducción de la canción seleccionada. Este proyecto fue creado con el propósito de aprender sobre el manejo del DOM (Document Object Model) y la interacción con etiquetas multimedia en HTML.",
+    github: "https://github.com/Exe-Figueroa/music-player",
+    image: "projects/2portfolio.webp",
+    tags: [TAGS.js, TAGS.html, TAGS.css],
+  },
+  {
+    title: "Atrapando la pelotita (desktop)",
+    description:
+      "Se trata de un juego de escritorio desarrollado con HTML, CSS y JavaScript en el que el objetivo es atrapar una pelotita en constante movimiento. El juego fue creado con el propósito de practicar la manipulación del DOM (Document Object Model).",
+    link: "https://atrapando-la-pelotita.vercel.app/",
+    github: "https://github.com/Exe-Figueroa/AtrapandoLaPelotita",
     image: "projects/4portfolio.webp",
-    tags: [TAGS.react],
+    tags: [TAGS.html, TAGS.css, TAGS.js],
   },
 ];
 ---
 
 {
-  PROJECTS.map(({title, description, github, image, link,tags}) => (
+  PROJECTS.map(({ title, description, github, image, link, tags }) => (
     <article class="mb-8">
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row">
+      <ul class="flex gap-x-2 flex-row flex-wrap">
         {tags.map((tag) => (
           // <li>{tag}</li>
           <li>
-            <span class={`inline-flex py-1 px-2 items-center gap-x-2 rounded-full text-xs mb-4 ${tag.class}`}>
+            <span
+              class={`inline-flex py-1 px-2 items-center gap-x-2 rounded-full text-xs mb-4 ${tag.class}`}
+            >
               <tag.icon class="size-4" />
               {tag.name}
             </span>
           </li>
         ))}
       </ul>
-      <img 
-      class="rounded shadow-2xl shadow-white/10"
-      src={image} 
-      alt={`Captura de pantalla del proyecto ${image}`}
+      <img
+        class="rounded shadow-2xl shadow-white/10 mb-4"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
       />
+      <div class="w-full flex sm:flex-col items-start gap-2">
+        <ProyectBtn
+					href={link}
+					target="_blank"
+					rel="noonpener"
+				>
+        <SeeMore class="size-6"/>
+        Ver más
+				</ProyectBtn>
+        <ProyectBtn
+        href={github}
+        target="_blank"
+					rel="noonpener"
+          >
+          <GitHub class="size-6"/>
+					GitHub
+				</ProyectBtn>
+      </div>
     </article>
   ))
 }
-
