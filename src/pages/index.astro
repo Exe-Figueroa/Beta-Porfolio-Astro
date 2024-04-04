@@ -1,15 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import SocialPill from "../components/icons/SocialPill.astro";
-import Email from "../components/icons/Email.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
+import SocialMediaDescription from "../components/SocialMediaDescription.astro";
+import facuDev from "../../public/facu-dev.png"
 ---
 
 <Layout
@@ -18,63 +15,20 @@ import Code from "../components/icons/Code.astro";
 >
 	<main class="p-2">
 		<!-- Section for the person description -->
-		<SectionContainer class="pt-36 pb-32" id="sobre-mi">
-			<img
-				class="rounded-full size-20 object-cover mb-5"
-				src="/photo-portfolio.png"
-				alt="Facundo Photo"
-			/>
-			<h1
-				class="text-white text-2xl lg:text-5xl font-bold flex flex-col  sm:flex-row sm:items-center gap-x-4 gap-y-2 pb-10"
-			>
-				Hey soy Facu! <a
-					href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
-					target="_blank"
-					rel="noonpener"
-					class="flex sm:justify-center items-center"
-				>
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
+		<SectionContainer
+			class="pt-36 pb-32 lg:w-9/10 flex items-center"
+			id="sobre-mi"
+		>
+			<!-- socialMedia -->
+			<SocialMediaDescription/>
+			<article class="flex flex-col gap-4 lg:w-4/10">
+				<h3>JavaScript</h3>
+				<h3>Facundo Figueroa</h3>
+				<!-- <h1 class="font-bold text-5xl">Web-Developer</h1> -->
+				<img src="../../public/facu-dev.png" alt="" class="w-[400px] -rotate-1"/>
+				<p>El mejor programador del mundo en algún futuro no muy lejano. Que la chupe el que no lo crea</p>
 
-			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="">+1 año de experiencia.</span>
-				<span class="text-yellow-200/90">
-					Desarrollador Web con JavaScript</span
-				>. <span class="text-blue-200/90">De Mendoza, Argentina 🇦🇷</span>. <span
-					class="opacity-75"
-				>
-					Especializado en crear aplicaciones únicas</span
-				>.
-			</h2>
-
-			<nav class="flex flex-wrap gap-4 mt-8">
-				<SocialPill
-					href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
-					target="_blank"
-					rel="noonpener"
-				>
-					<LinkedIn class="size-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill
-					href="https://github.com/Exe-Figueroa"
-					target="_blank"
-					rel="noonpener"
-				>
-					<GitHub class="size-6" />
-					GitHub
-				</SocialPill>
-
-				<SocialPill
-					href="https://github.com/Exe-Figueroa"
-					target="_blank"
-					rel="noonpener"
-				>
-					<Email class="size-6" />
-					facundofigueroa789@gmail.com
-				</SocialPill>
-			</nav>
+			</article>
 		</SectionContainer>
 
 		<!-- Experience Section -->
@@ -96,3 +50,60 @@ import Code from "../components/icons/Code.astro";
 		</SectionContainer>
 	</main>
 </Layout>
+
+<!-- template viejo de la primer sección -->
+<!-- 
+<img
+	class="rounded-full size-20 object-cover mb-5"
+	src="/photo-portfolio.png"
+	alt="Facundo Photo"
+/>
+<h1
+	class="text-white text-2xl lg:text-5xl font-bold flex flex-col sm:flex-row sm:items-center gap-x-4 gap-y-2 pb-10"
+>
+	Hey soy Facu! <a
+		href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
+		target="_blank"
+		rel="noonpener"
+		class="flex sm:justify-center items-center"
+	>
+		<Badge>Disponible para trabajar</Badge>
+	</a>
+</h1>
+
+<h2 class="text-2xl opacity-80 text-wrap">
+	<span class="">+1 año de experiencia.</span>
+	<span class="text-yellow-200/90"> Desarrollador Web con JavaScript</span>. <span
+		class="text-blue-200/90">De Mendoza, Argentina 🇦🇷</span
+	>. <span class="opacity-75">
+		Especializado en crear aplicaciones únicas</span
+	>.
+</h2>
+
+<nav class="flex flex-wrap gap-4 mt-8">
+	<SocialPill
+		href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
+		target="_blank"
+		rel="noonpener"
+	>
+		<LinkedIn class="size-6" />
+		LinkedIn
+	</SocialPill>
+	<SocialPill
+		href="https://github.com/Exe-Figueroa"
+		target="_blank"
+		rel="noonpener"
+	>
+		<GitHub class="size-6" />
+		GitHub
+	</SocialPill>
+
+	<SocialPill
+		href="https://github.com/Exe-Figueroa"
+		target="_blank"
+		rel="noonpener"
+	>
+		<Email class="size-6" />
+		facundofigueroa789@gmail.com
+	</SocialPill>
+</nav> -->
