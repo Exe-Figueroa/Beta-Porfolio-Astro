@@ -2,11 +2,10 @@
 import Email from "./icons/Email.astro";
 import GitHub from "./icons/GitHub.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
-
-
+const { class: className, id } = Astro.props;
 ---
 
-<ul class="list-none flex flex-col gap-8">
+<ul class={`list-none gap-8 ${className}`}>
   <li class="hover:scale-150 transition">
     <a
       href="https://github.com/Exe-Figueroa"
@@ -27,7 +26,7 @@ import LinkedIn from "./icons/LinkedIn.astro";
   </li>
   <li class="hover:scale-150 transition">
     <a
-      href="https://github.com/Exe-Figueroa"
+      href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
       target="_blank"
       rel="noonpener"
     >
