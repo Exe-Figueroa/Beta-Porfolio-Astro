@@ -6,7 +6,7 @@ import Projects from "../components/Projects.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
 import SocialMediaDescription from "../components/SocialMediaDescription.astro";
-import facuDev from "../../public/facu-dev.png"
+import facuDev from "../../public/photo-portfolio.png"
 ---
 
 <Layout
@@ -16,24 +16,28 @@ import facuDev from "../../public/facu-dev.png"
 	<main class="p-2">
 		<!-- Section for the person description -->
 		<SectionContainer
-			class="pt-36 pb-32 lg:w-9/10 flex items-center"
+			class="pt-18 pb-32 lg:w-9/10 flex items-center h-fit"
 			id="sobre-mi"
 		>
 			<!-- socialMedia -->
 			<SocialMediaDescription/>
-			<article class="flex flex-col gap-4 lg:w-4/10">
-				<h3>JavaScript</h3>
-				<h3>Facundo Figueroa</h3>
-				<!-- <h1 class="font-bold text-5xl">Web-Developer</h1> -->
-				<img src="../../public/facu-dev.png" alt="" class="w-[400px] -rotate-1"/>
-				<p>El mejor programador del mundo en algún futuro no muy lejano. Que la chupe el que no lo crea</p>
+			<div
+			class="mx-auto flex items-center w-[800px]"
+			>
+				<article class="flex flex-col gap-4 p-6 h-fit mt-14 mr-20">
+					<h3>JavaScript</h3>
+					<h3>Facundo Figueroa</h3>
+					<h1 class="font-goblin text-5xl">Web-Developer</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum eius velit, officiis doloribus molestiae autem illo exercitationem nulla illum fuga, sunt deserunt consequatur obcaecati eligendi inventore. Architecto, officiis cupiditate.</p>
+				</article>
+				<img src="/public/photo-portfolio.png" alt="Imagen del facu" class="-mt-9 h-[500px]" style="mask-image: linear-gradient(black 80%, transparent">
 
-			</article>
+			</div>
 		</SectionContainer>
 
 		<!-- Experience Section -->
-		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+		<SectionContainer id="experiencia" class="lg:w-[750px]">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center ">
 				<Briefcase class="size-8" />
 				Experiencia
 			</h2>
@@ -41,7 +45,7 @@ import facuDev from "../../public/facu-dev.png"
 		</SectionContainer>
 
 		<!-- Projects Section -->
-		<SectionContainer id="proyectos">
+		<SectionContainer id="proyectos" class="lg:w-[750px]">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Code class="size-8" />
 				Proyectos
