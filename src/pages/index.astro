@@ -1,84 +1,65 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import SocialPill from "../components/icons/SocialPill.astro";
-import Email from "../components/icons/Email.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
+import SocialMediaDescription from "../components/SocialMediaDescription.astro";
+import Badge from "../components/Badge.astro";
+import NavSocialMedia from "../components/NavSocialMedia.astro";
 ---
 
 <Layout
 	title="Beta-Portfolio Facundo - Desarrollador y Programador Web"
 	description="Contrata a Facundo para crear tu aplicación web. Desarrollador web full stack especializado en crear aplicaciones únicas"
 >
-	<main class="p-2">
+	<main class="p-2 font-custom">
 		<!-- Section for the person description -->
-		<SectionContainer class="pt-36 pb-32" id="sobre-mi">
-			<img
-				class="rounded-full size-20 object-cover mb-5"
-				src="/photo-portfolio.png"
-				alt="Facundo Photo"
-			/>
-			<h1
-				class="text-white text-2xl lg:text-5xl font-bold flex flex-col  sm:flex-row sm:items-center gap-x-4 gap-y-2 pb-10"
-			>
-				Hey soy Facu! <a
-					href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
-					target="_blank"
-					rel="noonpener"
-					class="flex sm:justify-center items-center"
+		<SectionContainer
+			class="pt-18 pb-32 lg:w-9/10 flex items-center h-fit mt-16 md:mt-0"
+			id="sobre-mi"
+		>
+			<!-- socialMedia -->
+			<SocialMediaDescription class="hidden sm:flex sm:flex-col" />
+			<div class="mx-auto flex flex-col lg:flex-row items-center w-[800px]">
+				<article
+					class="flex flex-col md:mx-auto lg:mx-0 gap-4 p-6 h-fit mt-14 lg:mr-20 relative"
 				>
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-
-			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="">+1 año de experiencia.</span>
-				<span class="text-yellow-200/90">
-					Desarrollador Web con JavaScript</span
-				>. <span class="text-blue-200/90">De Mendoza, Argentina 🇦🇷</span>. <span
-					class="opacity-75"
-				>
-					Especializado en crear aplicaciones únicas</span
-				>.
-			</h2>
-
-			<nav class="flex flex-wrap gap-4 mt-8">
-				<SocialPill
-					href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
-					target="_blank"
-					rel="noonpener"
-				>
-					<LinkedIn class="size-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill
-					href="https://github.com/Exe-Figueroa"
-					target="_blank"
-					rel="noonpener"
-				>
-					<GitHub class="size-6" />
-					GitHub
-				</SocialPill>
-
-				<SocialPill
-					href="https://github.com/Exe-Figueroa"
-					target="_blank"
-					rel="noonpener"
-				>
-					<Email class="size-6" />
-					facundofigueroa789@gmail.com
-				</SocialPill>
-			</nav>
+					<img
+						src="/photo-portfolio-small.png"
+						alt="small profile image"
+						class="size-20 rounded-full absolute right-7 top-0 object-cover lg:hidden"
+					/>
+					<h3>JavaScript</h3>
+					<h3>Facundo Figueroa</h3>
+					<h1 class="font-goblin text-5xl">Web-Developer</h1>
+					<p class="text-pretty font-light">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+						cum eius velit, officiis doloribus molestiae autem illo
+						exercitationem nulla illum fuga, sunt deserunt consequatur obcaecati
+						eligendi inventore. Architecto, officiis cupiditate.
+					</p>
+					<a
+						href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
+						target="_blank"
+						rel="noonpener"
+					>
+						<Badge>Disponible para trabajar</Badge>
+					</a>
+					<NavSocialMedia />
+				</article>
+				<img
+					src="/photo-portfolio.png"
+					alt="Profile image"
+					class="hidden lg:flex -mt-12 lg:h-[500px]"
+					style="mask-image: linear-gradient(black 80%, transparent"
+				/>
+			</div>
 		</SectionContainer>
 
 		<!-- Experience Section -->
-		<SectionContainer id="experiencia">
+		<SectionContainer id="experiencia" class="lg:w-[750px]">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-8" />
 				Experiencia
@@ -87,7 +68,7 @@ import Code from "../components/icons/Code.astro";
 		</SectionContainer>
 
 		<!-- Projects Section -->
-		<SectionContainer id="proyectos">
+		<SectionContainer id="proyectos" class="lg:w-[750px]">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Code class="size-8" />
 				Proyectos

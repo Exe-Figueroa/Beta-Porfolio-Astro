@@ -1,0 +1,36 @@
+---
+import Email from "./icons/Email.astro";
+import GitHub from "./icons/GitHub.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import SocialPill from "./icons/SocialPill.astro";
+
+const {class: className} = Astro.props;
+---
+
+<nav class={`flex flex-wrap gap-4 mt-8 sm:hidden ${className}`}>
+  <SocialPill
+    href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
+    target="_blank"
+    rel="noonpener"
+  >
+    <LinkedIn class="size-6" />
+    LinkedIn
+  </SocialPill>
+  <SocialPill
+    href="https://github.com/Exe-Figueroa"
+    target="_blank"
+    rel="noonpener"
+  >
+    <GitHub class="size-6" />
+    GitHub
+  </SocialPill>
+
+  <SocialPill
+    href="mailto:facundofigueroa789@gmail.com"
+    target="_blank"
+    rel="noonpener"
+  >
+    <Email class="size-6" />
+    facundofigueroa789@gmail.com
+  </SocialPill>
+</nav>
