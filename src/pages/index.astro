@@ -8,6 +8,14 @@ import Code from "../components/icons/Code.astro";
 import SocialMediaDescription from "../components/SocialMediaDescription.astro";
 import Badge from "../components/Badge.astro";
 import NavSocialMedia from "../components/NavSocialMedia.astro";
+import Tools from "../components/icons/Tools.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+import React from "../components/icons/React.astro";
+import HTML from "../components/icons/HTML.astro";
+import CSS from "../components/icons/CSS.astro";
+import DB from "../components/icons/DB.astro";
+import Node from "../components/icons/Node.astro";
+
 ---
 
 <Layout
@@ -37,12 +45,12 @@ import NavSocialMedia from "../components/NavSocialMedia.astro";
 					<h2 class="text-2xl opacity-80 text-wrap">
 						<span class="">+1 año de experiencia.</span>
 						<span class="text-yellow-200/90">
-							Desarrollador Web con JavaScript</span
-						>. <span class="text-blue-200/90">De Mendoza, Argentina 🇦🇷</span>. <span
-							class="opacity-75"
-						>
-							Especializado en crear aplicaciones únicas</span
-						>.
+							Desarrollador Web con JavaScript
+						</span>.
+						<span class="text-blue-200/90">De Mendoza, Argentina 🇦🇷</span>.
+						<span class="opacity-75">
+							Especializado en crear aplicaciones únicas
+						</span>.
 					</h2>
 					<a
 						href="https://www.linkedin.com/in/facundo-figueroa-847286270/"
@@ -80,8 +88,25 @@ import NavSocialMedia from "../components/NavSocialMedia.astro";
 			<Projects />
 		</SectionContainer>
 		<!-- About me section -->
-		<SectionContainer id="experiencia" class="lg:w-[750px]">
-			
+		<SectionContainer id="sobre-mi" class="lg:w-[750px]" >
+
+		</SectionContainer>
+
+		<!-- Technologies section -->
+		<SectionContainer id="tecnologías" class="lg:w-[750px]" >
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Tools class="size-8" />
+				Tecnologías
+			</h2>
+			<div class="w-full flex justify-around">
+				<JavaScript class="size-24 bg-js"/>
+				<React class="size-24 text-react"/>
+				<HTML class="size-24 text-html"/>
+				<CSS class="size-24 text-css"/>
+				<DB class="size-24 text-postgres"/>
+				<Node class="size-24 text-node"/>
+
+			</div>
 		</SectionContainer>
 	</main>
 </Layout>
