@@ -98,13 +98,36 @@ import Node from "../components/icons/Node.astro";
 				<Tools class="size-8" />
 				Tecnologías
 			</h2>
-			<div class="w-full flex justify-around">
-				<JavaScript class="size-24 bg-js"/>
-				<React class="size-24 text-react"/>
-				<HTML class="size-24 text-html"/>
-				<CSS class="size-24 text-css"/>
-				<DB class="size-24 text-postgres"/>
-				<Node class="size-24 text-node"/>
+			<div class="w-full flex gap-2 flex-wrap md:flex-nowrap justify-center">
+				<section class="flex flex-col gap-3 items-center transition p-2 border bg-white/5 shadow-btn  sm:hover:bg-white/10 rounded-lg sm:hover:shadow-sm   border-white/10">
+					<JavaScript class="size-24 bg-js"/>
+					<span class="font-semibold ">JavaScript</span>
+				</section>
+
+				<section class="flex flex-col gap-3 items-center transition p-2 border bg-white/5 shadow-btn  sm:hover:bg-white/10 rounded-lg sm:hover:shadow-sm   border-white/10">
+					<React class="size-24 text-react"/>
+					<span class="font-semibold ">React</span>
+				</section>
+
+				<section class="flex flex-col gap-3 items-center transition p-2 border bg-white/5 shadow-btn  sm:hover:bg-white/10 rounded-lg sm:hover:shadow-sm   border-white/10">
+					<HTML class="size-24 text-html"/>
+					<span class="font-semibold ">HTML</span>
+				</section>
+
+				<section class="flex flex-col gap-3 items-center transition p-2 border bg-white/5 shadow-btn  sm:hover:bg-white/10 rounded-lg sm:hover:shadow-sm   border-white/10">
+					<CSS class="size-24 text-css"/>
+					<span class="font-semibold ">CSS</span>
+				</section>
+
+				<section class="flex flex-col gap-3 items-center transition p-2 border bg-white/5 shadow-btn  sm:hover:bg-white/10 rounded-lg sm:hover:shadow-sm   border-white/10">
+					<DB class="size-24 text-postgres"/>
+					<span class="font-semibold ">PostreSQL</span>
+				</section>
+
+				<section class="flex flex-col gap-3 items-center transition p-2 border bg-white/5 shadow-btn  sm:hover:bg-white/10 rounded-lg sm:hover:shadow-sm   border-white/10">
+					<Node class="size-24 text-node"/>
+					<span class="font-semibold ">Node</span>
+				</section>
 
 			</div>
 		</SectionContainer>
